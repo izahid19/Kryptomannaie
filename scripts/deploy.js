@@ -3,7 +3,7 @@ const fs = require('fs')
 
 async function main() {
   const taxFee = 5
-  const Contract = await hre.ethers.getContractFactory('Kryptomannaie')
+  const Contract = await hre.ethers.getContractFactory('Genesis')
   const contract = await Contract.deploy(taxFee)
 
   await contract.deployed()
