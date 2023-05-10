@@ -1,16 +1,31 @@
 import { setGlobalState, useGlobalState } from '../store'
+import Typed from "react-typed"
 const Hero = () => {
   const [stats] = useGlobalState('stats')
 
   return (
+    <>
     <div className="text-center  text-gray-800 py-24 px-6">
       <h1
         className="text-5xl drop-shadow-xl md:text-6xl xl:text-7xl font-bold
       tracking-tight mb-12"
       >
-        <span className="capitalize text-slate-300">Bring creative projects to life on</span>
+        <span className="capitalize text-slate-300">
+        <Typed
+          strings={[
+            "Welcome to",
+            "Bring creative projects to life on",
+            "Donnez vie à des projets créatifs sur"
+          ]
+          }
+          typeSpeed={100}
+          backSpeed={100}
+          loop
+
+          />
+        </span>
         <br />
-        <span className="uppercase text-green-600">Kryptomonnaie.</span>
+        <span className=" mb-3 uppercase text-yellow-300">Kryptomonnaie.</span>
       </h1>
       <div className="flex justify-center items-center space-x-2">
         <button
@@ -73,6 +88,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -16,7 +16,7 @@ const Projects = ({ projects }) => {
   }, [projects, end])
 
   return (
-    <div className="flex flex-col px-6 mb-7 bg-gradient-to-r from-black via-purple-500 to-pink-500">
+    <div className="flex flex-col px-6 mb-7 ">
       <div className="flex justify-center items-center flex-wrap">
         {collection.map((project, i) => (
           <ProjectCard key={i} project={project} />

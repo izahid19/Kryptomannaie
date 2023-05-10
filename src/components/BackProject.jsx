@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Typed from "react-typed"
 import { FaTimes } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 import { backProject } from '../services/blockchain'
@@ -24,7 +25,7 @@ const BackProject = ({ project }) => {
     transform transition-transform duration-300 ${backModal}`}
     >
       <div
-        className="bg-white shadow-xl shadow-black
+        className="bg-gradient-to-t from-slate-400 via-purple-500 to-pink-500 shadow-xl shadow-black
         rounded-xl w-11/12 md:w-2/5 h-7/12 p-6"
       >
         <form onSubmit={handleSubmit} className="flex flex-col">
@@ -40,7 +41,7 @@ const BackProject = ({ project }) => {
           </div>
 
           <div className="flex justify-center items-center mt-5">
-            <div className="rounded-xl overflow-hidden h-20 w-20">
+            <div className="rounded-xl overflow-hidden h-40 w-40">
               <img
                 src={
                   project?.imageURL ||
@@ -51,10 +52,23 @@ const BackProject = ({ project }) => {
               />
             </div>
           </div>
+          <div className='flex justify-between items-center text-lg
+           mt-5 font-bold text-slate-800'>
+          <Typed
+          strings={[
+            `Thank you for your participation.`,
+            "Merci de votre participation."
+          ]
+          }
+          typeSpeed={100}
+          backSpeed={100}
+          loop
+
+          /></div>
 
           <div
             className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
+          bg-gray-300 rounded-xl mt-1"
           >
             <input
               className="block w-full bg-transparent
@@ -73,11 +87,11 @@ const BackProject = ({ project }) => {
 
           <button
             type="submit"
-            className="inline-block px-6 py-2.5 bg-green-600
+            className="inline-block px-6 py-2.5 bg-blue-600
             text-white font-medium text-md leading-tight
             rounded-full shadow-md hover:bg-green-700 mt-5"
           >
-            Back Project
+            Donate
           </button>
         </form>
       </div>

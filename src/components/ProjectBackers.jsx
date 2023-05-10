@@ -60,35 +60,35 @@ const Backer = ({ backer }) => (
       className="text-sm font-light
       px-6 py-4 whitespace-nowrap"
     >
-      <div className="flex justify-start items-center space-x-2">
+      <div className="flex justify-start items-center font-semibold space-x-2 text-slate-200">
         <Identicon
           className="h-10 w-10 object-contain rounded-full shadow-md"
           string={backer.owner}
           size={25}
         />
-        <span>{truncate(backer.owner, 4, 4, 11)}</span>
+        <span>{truncate(backer.owner, 5, 5, 13)}</span>
       </div>
     </td>
     <td
-      className="text-sm font-light
+      className="text-lg font-light
                   px-6 py-4 whitespace-nowrap"
     >
       <small className="flex justify-start items-center space-x-1">
         <FaEthereum />
-        <span className="text-gray-700 font-medium">
+        <span className="text-slate-200 font-semibold ">
           {backer.contribution} ETH
         </span>
       </small>
     </td>
     <td
-      className="text-sm font-light
-      px-6 py-4 whitespace-nowrap"
+      className="text-sm
+      px-6 py-4 whitespace-nowrap font-semibold text-slate-200"
     >
       {backer.refunded ? 'Yes' : 'No'}
     </td>
     <td
-      className="text-sm font-light
-      px-6 py-4 whitespace-nowrap"
+      className="text-sm font-semibold
+      px-6 py-4 whitespace-nowrap text-slate-200"
     >
       <Moment fromNow>{backer.timestamp}</Moment>
     </td>

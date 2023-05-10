@@ -17,7 +17,7 @@ const ProjectDetails = ({ project }) => {
       <div className="flex justify-center flex-col md:w-2/3">
         <div
           className="flex justify-start items-start
-        sm:space-x-4 flex-wrap"
+        sm:space-x-4 flex-wrap "
         >
           <img
             src={project?.imageURL}
@@ -56,23 +56,23 @@ const ProjectDetails = ({ project }) => {
 
               <div className="font-bold text-xl">
                 {expired ? (
-                  <small className="text-red-600">Expired</small>
+                  <small className="text-red-600 text-lg font-semibold">Expired</small>
                 ) : project?.status == 0 ? (
-                  <small className="text-gray-600">Open</small>
+                  <small className="text-blue-500 text-lg font-semibold">Open</small>
                 ) : project?.status == 1 ? (
-                  <small className="text-green-600">Accepted</small>
+                  <small className="text-green-600 text-lg font-semibold">Accepted</small>
                 ) : project?.status == 2 ? (
                   <small className="text-gray-600">Reverted</small>
                 ) : project?.status == 3 ? (
-                  <small className="text-red-600">Deleted</small>
+                  <small className="text-red-500 text-lg font-semibold">Deleted</small>
                 ) : (
-                  <small className="text-orange-600">Paid</small>
+                  <small className="text-red-500 text-lg font-semibold">Paid</small>
                 )}
               </div>
             </div>
 
             <div>
-              <p className="text-sm font-light mt-2">{project?.description}</p>
+              <p className="text-sm font-semibold mt-2 text-gray-200">{project?.description}</p>
               <div className="w-full overflow-hidden bg-gray-300 mt-4">
                 <div
                   className="bg-green-600 text-xs font-medium

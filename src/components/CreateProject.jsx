@@ -81,10 +81,13 @@ const CreateProject = () => {
               />
             </div>
           </div>
+          <div className="flex justify-between items-center font-bold
+          mt-5  text-slate-800">Campaign Title</div>
+          
 
           <div
             className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
+          bg-gray-300 rounded-xl mt-1"
           >
             <input
               className="block w-full bg-transparent
@@ -92,16 +95,18 @@ const CreateProject = () => {
             focus:ring-0"
               type="text"
               name="title"
-              placeholder="Title"
+              placeholder="Campaign Title"
               onChange={(e) => setTitle(e.target.value)}
               value={title}
               required
             />
           </div>
+          <div className="flex justify-between items-center font-bold
+           mt-5  text-slate-800">Total Amount (In Etherium)</div>
 
           <div
             className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
+          bg-gray-300 rounded-xl mt-1"
           >
             <input
               className="block w-full bg-transparent
@@ -117,10 +122,12 @@ const CreateProject = () => {
               required
             />
           </div>
+          <div className="flex justify-between items-center font-bold
+          mt-5  text-slate-800">Campaign End Date</div>
 
           <div
             className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
+          bg-gray-300 rounded-xl mt-1"
           >
             <input
               className="block w-full bg-transparent
@@ -134,10 +141,12 @@ const CreateProject = () => {
               required
             />
           </div>
+          <div className="flex justify-between items-center font-bold
+          mt-5  text-slate-800">Image URL</div>
 
           <div
             className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
+          bg-gray-300 rounded-xl mt-1"
           >
             <input
               className="block w-full bg-transparent
@@ -151,10 +160,12 @@ const CreateProject = () => {
               required
             />
           </div>
+          <div className="flex justify-between items-center font-bold
+          mt-5  text-slate-800">Description</div>
 
           <div
             className="flex justify-between items-center
-          bg-gray-300 rounded-xl mt-5"
+          bg-gray-300 rounded-xl mt-1"
           >
             <textarea
               className="block w-full bg-transparent
