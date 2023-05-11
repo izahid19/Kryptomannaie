@@ -16,7 +16,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-t from-slate-300 via-purple-400 to-pink-500">
+    <div className="min-h-screen  sm:w-fit">
       <Header />
       {loaded ? (
         <Routes>

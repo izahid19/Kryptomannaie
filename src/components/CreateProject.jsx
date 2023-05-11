@@ -54,7 +54,7 @@ const CreateProject = () => {
     transform transition-transform duration-300 ${createModal}`}
     >
       <div
-        className="bg-gradient-to-t from-slate-400 via-purple-500 to-pink-500 shadow-xl shadow-black
+        className="bg-gradient-to-t from-slate-400 via-pink-400 to-pink-800 shadow-xl shadow-black
         rounded-xl w-11/12 md:w-2/5 h-7/12 p-6"
       >
         <form onSubmit={handleSubmit} className="flex flex-col">

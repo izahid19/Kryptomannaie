@@ -10,7 +10,7 @@ const Hero = () => {
         className="text-5xl drop-shadow-xl md:text-6xl xl:text-7xl font-bold
       tracking-tight mb-12"
       >
-        <span className="capitalize text-slate-300">
+        <span className="capitalize text-slate-50">
         <Typed
           strings={[
             "Welcome to",

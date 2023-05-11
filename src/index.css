@@ -13,6 +13,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#gradient-canvas {
+  width: 100%;
+  height: 100vh;
+  --gradient-color-1: #F56EB3;
+  --gradient-color-2: #CB1C8D;
+  --gradient-color-3: #7F167F;
+  --gradient-color-4: #460C68;
+}
+
+
 
 
 @tailwind base;
