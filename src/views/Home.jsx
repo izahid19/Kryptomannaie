@@ -21,7 +21,7 @@ const Home = () => {
 
       <div classname="">                           
       <Hero />
-      
+      <Projects projects={projects} />
       <CreateProject />
       <AddButton />
       </div> 
