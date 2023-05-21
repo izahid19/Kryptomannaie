@@ -5,10 +5,10 @@ const Hero = () => {
 
   return (
     <>
-    <div className="text-center  text-gray-800 py-24 px-6">
+    <div className="text-center  text-gray-800 py-24 px-6 ">
       <h1
-        className="text-5xl drop-shadow-xl md:text-6xl xl:text-7xl font-bold
-      tracking-tight mb-12"
+        className="text-4xl drop-shadow-xl md:text-6xl xl:text-7xl sm:text-xl sm:drop-shadow-lg font-bold
+      tracking-tight mb-12 mt-12"
       >
         <span className="capitalize text-slate-50">
         <Typed
@@ -25,7 +25,7 @@ const Hero = () => {
           />
         </span>
         <br />
-        <span className=" mb-3 uppercase text-yellow-300">Kryptomonnaie.</span>
+        <span className="flex justify-center mb-3 uppercase text-yellow-300 pb-5">Kryptomonnaie.</span>
       </h1>
       <div className="flex justify-center items-center space-x-2">
         <button
@@ -49,7 +49,7 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className="flex justify-center items-center mt-10">
+      <div className="flex justify-center items-center mt-10  bg-slate-700 bg-opacity-30">
         <div
           className="flex flex-col justify-center items-center
           h-20 border shadow-md w-full"

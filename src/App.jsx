@@ -26,9 +26,9 @@ const App = () => {
   }, [])
 
   return (
-    <div className='relative w-screen'>
+    <div className='relative w-screen h-full .overflow-y-hidden xl:h-full lg:h-full md:h-full sm:h-screen'>
 
-    <div className="left-0 top-0 right-0 h-full w-screen z-10">
+    <div className="left-0 top-0 right-0 bottom-0 h-full w-screen z-10 sm:w-screen">
       <Header />
       {loaded ? (
         <Routes>
@@ -50,7 +50,7 @@ const App = () => {
         theme="dark"
       />
     </div>
-    <canvas id="gradient-canvas" className='absolute left-0 top-0 -z-10 w-full' data-transition-in ref={ref}></canvas>
+    <canvas id="gradient-canvas" className='absolute left-0 top-0 -z-10 w-full h-full xl:h-screen lg:h-screen md:h-screen sm:h-screen' data-transition-in ref={ref}></canvas>
     </div>
   )
 }

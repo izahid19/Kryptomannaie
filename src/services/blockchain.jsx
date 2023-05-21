@@ -10,7 +10,14 @@ let tx
 
 const connectWallet = async () => {
   try {
-    if (!ethereum) return alert('Please install Metamask')
+    if (!ethereum) return  Swal.fire({
+        title: "Please install Metamask",
+        icon: 'warning',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText:'Okay',
+        color:'white',
+        background:'#454545',
+      })
     const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
     setGlobalState('connectedAccount', accounts[0]?.toLowerCase())
   } catch (error) {
@@ -20,7 +27,14 @@ const connectWallet = async () => {
 
 const isWallectConnected = async () => {
   try {
-    if (!ethereum) return alert('Please install Metamask')
+    if (!ethereum) return  Swal.fire({
+        title: "Please install Metamask",
+        icon: 'warning',
+        confirmButtonColor: '#3085d6',
+        color:'white',
+        background:'#454545',
+        confirmButtonText:'Okay'
+      })
     const accounts = await ethereum.request({ method: 'eth_accounts' })
     setGlobalState('connectedAccount', accounts[0]?.toLowerCase())
 
@@ -34,10 +48,29 @@ const isWallectConnected = async () => {
     })
 
     if (accounts.length) {
-      setGlobalState('connectedAccount', accounts[0]?.toLowerCase())
+      setGlobalState('connectedAccount', accounts[0]?.toLowerCase()),
+      
+      Swal.fire({
+          position: 'top-middle',
+          icon: 'success',
+          title:'Your Account has been Connected',
+          showConfirmButton: false,
+          timer: 3500,
+          color:'white',
+          background:'#454545'
+        }) 
+    
     } else {
-      alert('Please connect wallet.')
-      console.log('No accounts found.')
+      Swal.fire({
+        title: "Please Connect Your Wallet",
+        color:'white',
+        background:'#454545',
+        icon: 'info',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText:'Okay',
+        className:"connect-button",
+        
+      })
     }
   } catch (error) {
     reportError(error)
@@ -66,7 +99,14 @@ const createProject = async ({
   expiresAt,
 }) => {
   try {
-    if (!ethereum) return alert('Please install Metamask')
+    if (!ethereum) return  Swal.fire({
+        title: "Please install Metamask",
+        icon: 'warning',
+        confirmButtonColor: '#3085d6',
+        color:'white',
+        background:'#454545',
+        confirmButtonText:'Okay'
+      })
 
     const contract = await getEtheriumContract()
     cost = ethers.utils.parseEther(cost)
@@ -86,7 +126,14 @@ const updateProject = async ({
   expiresAt,
 }) => {
   try {
-    if (!ethereum) return alert('Please install Metamask')
+    if (!ethereum) return  Swal.fire({
+        title: "Please install Metamask",
+        icon: 'warning',
+        confirmButtonColor: '#3085d6',
+        color:'white',
+        background:'#454545',
+        confirmButtonText:'Okay'
+      })
 
     const contract = await getEtheriumContract()
     tx = await contract.updateProject(id, title, description, imageURL, expiresAt)
@@ -99,7 +146,14 @@ const updateProject = async ({
 
 const deleteProject = async (id) => {
   try {
-    if (!ethereum) return alert('Please install Metamask')
+    if (!ethereum) return  Swal.fire({
+        title: "Please install Metamask",
+        icon: 'warning',
+        color:'white',
+        background:'#454545',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText:'Okay'
+      })
     const contract = await getEtheriumContract()
     await contract.deleteProject(id)
   } catch (error) {
@@ -137,7 +191,14 @@ const loadProject = async (id) => {
 
 const backProject = async (id, amount) => {
   try {
-    if (!ethereum) return alert('Please install Metamask')
+    if (!ethereum) return  Swal.fire({
+        title: "Please install Metamask",
+        icon: 'warning',
+        color:'white',
+        background:'#454545',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText:'Okay'
+      })
     const connectedAccount = getGlobalState('connectedAccount')
     const contract = await getEtheriumContract()
     amount = ethers.utils.parseEther(amount)
@@ -156,7 +217,14 @@ const backProject = async (id, amount) => {
 
 const getBackers = async (id) => {
   try {
-    if (!ethereum) return alert('Please install Metamask')
+    if (!ethereum) return  Swal.fire({
+        title: "Please install Metamask",
+        icon: 'warning',
+        color:'white',
+        background:'#454545',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText:'Okay'
+      })
     const contract = await getEtheriumContract()
     let backers = await contract.getBackers(id)
 
@@ -168,7 +236,14 @@ const getBackers = async (id) => {
 
 const payoutProject = async (id) => {
   try {
-    if (!ethereum) return alert('Please install Metamask')
+    if (!ethereum) return  Swal.fire({
+        title: "Please install Metamask",
+        icon: 'warning',
+        color:'white',
+        background:'#454545',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText:'Okay'
+      })
     const connectedAccount = getGlobalState('connectedAccount')
     const contract = await getEtheriumContract()
 

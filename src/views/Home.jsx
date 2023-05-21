@@ -16,10 +16,10 @@ const Home = () => {
   }, [])
   return (
     <>
-     <div className=''>
+     <div className='h-full'>
 
 
-      <div classname="">                           
+      <div classname="h-full">                           
       <Hero />
       <Projects projects={projects} />
       <CreateProject />

@@ -25,12 +25,12 @@ const BackProject = ({ project }) => {
     transform transition-transform duration-300 ${backModal}`}
     >
       <div
-        className="bg-gradient-to-t from-slate-400 via-pink-400 to-pink-800 shadow-xl shadow-black
+        className="bg-gradient-to-t from-slate-500 via-purple-400 to-purple-800 shadow-xl shadow-black
         rounded-xl w-11/12 md:w-2/5 h-7/12 p-6"
       >
         <form onSubmit={handleSubmit} className="flex flex-col">
           <div className="flex justify-between items-center">
-            <p className="font-semibold">{project?.title}</p>
+            <p className="font-semibold text-slate-50">{project?.title}</p>
             <button
               onClick={() => setGlobalState('backModal', 'scale-0')}
               type="button"
@@ -41,7 +41,7 @@ const BackProject = ({ project }) => {
           </div>
 
           <div className="flex justify-center items-center mt-5">
-            <div className="rounded-xl overflow-hidden h-40 w-40">
+            <div className="rounded-xl overflow-hidden h-60 w-80">
               <img
                 src={
                   project?.imageURL ||
@@ -53,7 +53,7 @@ const BackProject = ({ project }) => {
             </div>
           </div>
           <div className='flex justify-between items-center text-lg
-           mt-5 font-bold text-slate-800'>
+           mt-5 font-bold text-slate-50'>
           <Typed
           strings={[
             `Thank you for your participation.`,
@@ -87,9 +87,9 @@ const BackProject = ({ project }) => {
 
           <button
             type="submit"
-            className="inline-block px-6 py-2.5 bg-blue-600
+            className="inline-block px-6 py-2.5 bg-purple-600
             text-white font-medium text-md leading-tight
-            rounded-full shadow-md hover:bg-green-700 mt-5"
+            rounded-full shadow-md hover:bg-purple-800 mt-5"
           >
             Donate
           </button>

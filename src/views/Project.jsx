@@ -21,11 +21,14 @@ const Project = () => {
   }, [])
   return loaded ? (
     <>
+    <div className='h-screen'>
+
       <ProjectDetails project={project} />
       <UpdateProject project={project} />
       <DeleteProject project={project} />
       <BackProject project={project} />
       <ProjectBackers backers={backers} />
+    </div>
     </>
   ) : null
 }

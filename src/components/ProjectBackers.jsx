@@ -10,8 +10,8 @@ const ProjectBackers = ({ backers }) => {
         className="max-h-[calc(100vh_-_25rem)] overflow-y-auto
         shadow-md rounded-md w-full mb-10"
       >
-        <table className="min-w-full">
-          <thead className="border-b">
+        <table className="min-w-full bg-slate-700 bg-opacity-30">
+          <thead className="border-b text-white">
             <tr>
               <th
                 scope="col"

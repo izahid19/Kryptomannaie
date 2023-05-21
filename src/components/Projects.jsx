@@ -16,7 +16,7 @@ const Projects = ({ projects }) => {
   }, [projects, end])
 
   return (
-    <div className="flex flex-col px-6 mb-7 ">
+    <div className="flex flex-col px-6 pb-80 mb-7 ">
       <div className="flex justify-center items-center flex-wrap">
         {collection.map((project, i) => (
           <ProjectCard key={i} project={project} />
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
   const expired = new Date().getTime() > Number(project?.expiresAt + '000')
 
   return (
-    <div id="projects" className="rounded-lg shadow-lg bg-slate-300 w-64 m-4 transition duration-700 ease-in-out hover:scale-105 hover:shadow-slate-400">
+    <div id="projects" className="rounded-lg shadow-lg bg-slate-700 w-80 m-4 mb-10 transition duration-700 ease-in-out hover:scale-105 hover:shadow-slate-400">
       <Link to={'/projects/' + project.id}>
         <img
           src={project.imageURL}
@@ -53,21 +53,21 @@ const ProjectCard = ({ project }) => {
         />
 
         <div className="p-4">
-          <h5>{truncate(project.title, 25, 0, 28)}</h5>
+          <h5 className='text-slate-50'>{truncate(project.title, 25, 0, 28)}</h5>
 
           <div className="flex flex-col">
-            <div className="flex justify-start space-x-2 items-center mb-3">
+            <div className="flex justify-start space-x-2 items-center mb-3 pt-2">
               <Identicons
                 className="rounded-full shadow-md"
                 string={project.owner}
-                size={15}
+                size={20}
               />
-              <small className="text-gray-700">
+              <small className="text-green-200">
                 {truncate(project.owner, 4, 4, 11)}
               </small>
             </div>
 
-            <small className="text-gray-500">
+            <small className="text-slate-50 pb-3">
               {expired ? 'Expired' : daysRemaining(project.expiresAt) + ' left'}
             </small>
           </div>
@@ -83,7 +83,7 @@ const ProjectCard = ({ project }) => {
 
           <div
             className="flex justify-between items-center 
-        font-bold mt-1 mb-2 text-gray-700"
+        font-bold mt-1 mb-2 text-slate-50"
           >
             <small>{project.raised} ETH Raised</small>
             <small className="flex justify-start items-center">
@@ -103,7 +103,7 @@ const ProjectCard = ({ project }) => {
               {expired ? (
                 <small className="text-red-500">Expired</small>
               ) : project?.status == 0 ? (
-                <small className="text-gray-500">Open</small>
+                <small className="text-blue-500">Open</small>
               ) : project?.status == 1 ? (
                 <small className="text-green-500">Accepted</small>
               ) : project?.status == 2 ? (
